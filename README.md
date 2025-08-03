@@ -36,7 +36,7 @@ go mod tidy
 
 **输出任务结果**
 
-![image-20250803233351672](C:\Users\Xu\AppData\Roaming\Typora\typora-user-images\image-20250803233351672.png)
+![](https://images-of-oneday.oss-cn-guangzhou.aliyuncs.com/images/2025/08/03/23-37-42-05f079bc91dedda5233f1fa4eabc33a2-20250803233741-d5e2bf.png)
 
 请不用测试 `/api/beacon/generate`，因为它生成的文件并不是beacon，只是用于验证能否patch配置！因为sleep参数我改成了整数而不是字符串，所以生成的可执行文件不能反序列化，如果想成功反序列化，请参考我写的文章！
 
