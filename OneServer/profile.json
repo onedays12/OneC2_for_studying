@@ -1,0 +1,30 @@
+{
+    "TeamServer": {
+        "host": "192.168.1.1",
+        "port": 8081,
+        "endpoint": "/api",
+        "password": "123456",
+        "cert": "static/server.crt",
+        "key": "static/server.key",
+        "access_token_live_hours": 12,
+        "refresh_token_live_hours": 168,
+        "Env": "debug"
+    },
+    "ServerResponse": {
+        "status": 404,
+        "headers": {
+            "Content-Type": "text/html; charset=UTF-8",
+            "Server": "AdaptixC2",
+            "Adaptix Version": "v0.6"
+        },
+        "pagepath": "404.html"
+    },
+    "zap": {
+        "level": "info",
+        "max_size": 200,
+        "max_backups": 30,
+        "max_age": 5,
+        "is_console_print": true,
+        "path": "logs/zap.log"
+    }
+}

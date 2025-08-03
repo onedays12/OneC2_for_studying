@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>404 | AdaptixC2</title>
+    <style>        :root {
+        --bg: #0a0a0a;
+        --accent: #00f0ff;
+        --text: #ffffff;
+        --error: #ff005c;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--bg) 0%, #111 100%);
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: var(--text);
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* 背景浮动粒子 */        .particles {
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  pointer-events: none;
+                                  z-index: 0;
+                              }
+    .particles span {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: var(--accent);
+        border-radius: 50%;
+        opacity: 0.5;
+        animation: float 12s linear infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(100vh) scale(1); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-100px) scale(0); opacity: 0; }
+    }
+
+    /* 主内容卡片 */        .card {
+                                position: relative;
+                                z-index: 1;
+                                text-align: center;
+                                padding: 60px 80px;
+                                background: rgba(255, 255, 255, 0.03);
+                                border: 1px solid rgba(0, 240, 255, 0.2);
+                                border-radius: 12px;
+                                backdrop-filter: blur(10px);
+                                box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+                                animation: pulse 2s ease-in-out infinite alternate;
+                            }
+    @keyframes pulse {
+        from { box-shadow: 0 0 20px rgba(0, 240, 255, 0.15); }
+        to   { box-shadow: 0 0 40px rgba(0, 240, 255, 0.35); }
+    }
+
+    .card h1 {
+        font-size: 72px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        background: linear-gradient(90deg, var(--error), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 18px;
+        opacity: 0.8;
+        margin-bottom: 30px;
+    }
+
+    .card a {
+        display: inline-block;
+        padding: 12px 28px;
+        border: 1px solid var(--accent);
+        border-radius: 30px;
+        color: var(--accent);
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+    }
+    .card a:hover {
+        background: var(--accent);
+        color: var(--bg);
+    }
+    </style>
+</head>
+<body>
+
+<!-- 浮动粒子 -->
+<div class="particles" id="particles"></div>
+
+<!-- 主卡片 -->
+<div class="card">
+    <h1>404</h1>
+    <p>You need to enter the correct connection details.</p>
+    <a href="/">Back to Home</a>
+</div>
+
+<!-- 动态生成粒子 -->
+<script>
+    const particles = document.getElementById('particles');
+    for (let i = 0; i < 60; i++) {
+        const span = document.createElement('span');
+        span.style.left = Math.random() * 100 + '%';
+        span.style.animationDelay = Math.random() * 12 + 's';
+        span.style.animationDuration = 8 + Math.random() * 10 + 's';
+        particles.appendChild(span);
+    }
+</script>
+</body>
+</html>
