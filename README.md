@@ -1,6 +1,6 @@
 # 介绍
 
-一个用于与教学目的C2项目，完整项目要等几个月后了，功能及其不完善，请勿用于实战！
+一个用于教学目的C2项目，完整项目要等几个月后了，功能极其不完善，请勿用于实战！
 
 # 使用
 
@@ -36,21 +36,21 @@ go mod tidy
 
 **输出任务结果**
 
-![](https://images-of-oneday.oss-cn-guangzhou.aliyuncs.com/images/2025/08/03/22-19-17-5a8772c2d8aba2b9ef76556390fe9c20-20250803221917-a4cfcf.png)
+![image-20250803233351672](C:\Users\Xu\AppData\Roaming\Typora\typora-user-images\image-20250803233351672.png)
 
-请不用测试 `/api/beacon/generate`，因为它生成的文件并不是beacon，只是用于验证能否patch配置！因为sleep参数我改成了整数而不是字符串，所以生成的可执行文件不能反序列化！
+请不用测试 `/api/beacon/generate`，因为它生成的文件并不是beacon，只是用于验证能否patch配置！因为sleep参数我改成了整数而不是字符串，所以生成的可执行文件不能反序列化，如果想成功反序列化，请参考我写的文章！
 
 ![](https://images-of-oneday.oss-cn-guangzhou.aliyuncs.com/images/2025/08/03/22-21-41-82aa694859da3bb5d0cc76db5df2f5c5-20250803222141-9dcca8.png)
 
 # 更多细节
 
-如果你对一步一步构建C2感兴趣，请阅读我写的这篇文章：[从零开始手搓C2框架-先知社区](https://xz.aliyun.com/news/18564)
+如果你对一步一步构建C2感兴趣或者想了解更多细节，请阅读我写的这篇文章：[从零开始手搓C2框架-先知社区](https://xz.aliyun.com/news/18564)
 
 我的旧博客：[关于这个博客 | onedaybook](https://oneday.gitbook.io/onedaybook)
 
 我的新博客（还在弄，过一段时间）：
 
-**欢迎各位师傅交互友链！**
+**欢迎各位师傅交换友链！**
 
 # 参考资料
 
