@@ -83,9 +83,9 @@ func PackHeartBeat(heartBeat HeartBeat) []byte {
 		heartBeat.Jitter,                       // int32
 		heartBeat.KillDate,                     // int32
 		heartBeat.WorkingTime,                  // int32
-		heartBeat.ACP,                          // int16
-		heartBeat.OemCP,                        // int16
-		heartBeat.GmtOffset,                    // int8
+		heartBeat.ACP,                          // int32
+		heartBeat.OemCP,                        // int32
+		heartBeat.GmtOffset,                    // int32
 		heartBeat.Pid,                          // int16
 		heartBeat.Tid,                          // int16
 		heartBeat.BuildNumber,                  // int32

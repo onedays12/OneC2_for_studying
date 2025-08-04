@@ -14,8 +14,8 @@
         "status": 404,
         "headers": {
             "Content-Type": "text/html; charset=UTF-8",
-            "Server": "AdaptixC2",
-            "Adaptix Version": "v0.6"
+            "Server": "OneServer",
+            "Adaptix Version": "v10010"
         },
         "pagepath": "404.html"
     },

@@ -38,9 +38,13 @@ go mod tidy
 
 ![](https://images-of-oneday.oss-cn-guangzhou.aliyuncs.com/images/2025/08/03/23-37-42-05f079bc91dedda5233f1fa4eabc33a2-20250803233741-d5e2bf.png)
 
-请不用测试 `/api/beacon/generate`，因为它生成的文件并不是beacon，只是用于验证能否patch配置！因为sleep参数我改成了整数而不是字符串，所以生成的可执行文件不能反序列化，如果想成功反序列化，请参考我写的文章！
+可以不测试 `/api/beacon/generate`，因为它生成的文件并不是beacon，只是用于验证能否patch配置！
 
 ![](https://images-of-oneday.oss-cn-guangzhou.aliyuncs.com/images/2025/08/03/22-21-41-82aa694859da3bb5d0cc76db5df2f5c5-20250803222141-9dcca8.png)
+
+测试生成后的产物
+
+![](https://images-of-oneday.oss-cn-guangzhou.aliyuncs.com/images/2025/08/04/13-15-02-95569327d7171001b26c3c93e75b936f-20250804131501-663e39.png)
 
 # 更多细节
 
@@ -57,6 +61,7 @@ go mod tidy
 1、[Adaptix-Framework/AdaptixC2](https://github.com/Adaptix-Framework/AdaptixC2?tab=readme-ov-file)
 
 2、[sliver/server at master · BishopFox/sliver](https://github.com/BishopFox/sliver/tree/master/server)
+
 3、[HavocFramework/Havoc: The Havoc Framework](https://github.com/HavocFramework/Havoc)
 
 4、[mai1zhi2/SharpBeacon: CobaltStrike Beacon written in .Net 4 用.net重写了stager及Beacon，其中包括正常上线、文件管理、进程管理、令牌管理、结合SysCall进行注入、原生端口转发、关ETW等一系列功能](https://github.com/mai1zhi2/SharpBeacon)
