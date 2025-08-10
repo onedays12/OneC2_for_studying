@@ -52,7 +52,7 @@ go mod tidy
 
 我的旧博客：[关于这个博客 | onedaybook](https://oneday.gitbook.io/onedaybook)
 
-我的新博客（还在弄，过一段时间）：
+我的新博客：[oneday](https://onedays12.github.io/)
 
 **欢迎各位师傅交换友链！**
 
